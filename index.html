@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Luna RGA - Design Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #080b12;
+      color: #e8e4dc;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .hub-header {
+      text-align: center;
+      margin-bottom: 64px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hub-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #c9a84c;
+      margin-bottom: 16px;
+    }
+
+    .hub-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    .hub-subtitle {
+      font-size: 1rem;
+      color: rgba(232,228,220,0.55);
+    }
+
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .concept-card {
+      background: #12161f;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeUp 0.6s ease both;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .concept-card:nth-child(1) { animation-delay: 0.1s; }
+    .concept-card:nth-child(2) { animation-delay: 0.2s; }
+    .concept-card:nth-child(3) { animation-delay: 0.3s; }
+    .concept-card:nth-child(4) { animation-delay: 0.4s; }
+
+    .concept-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(201,168,76,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    }
+
+    /* Preview area */
+    .concept-preview {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Concept 1 preview — purple */
+    .preview-1 {
+      background: linear-gradient(135deg, #3b1f6e 0%, #6a35b8 60%, #8a4fd0 100%);
+    }
+
+    .preview-1::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.07) 1px, transparent 0);
+      background-size: 28px 28px;
+    }
+
+    .preview-1-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .preview-1-content .moon { font-size: 2rem; margin-bottom: 8px; }
+
+    .preview-1-content .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .preview-1-content .tag {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 12px;
+      background: #e8b84b;
+      color: #1a1228;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .preview-swatches-1 {
+      display: flex;
+      gap: 6px;
+      margin-top: 14px;
+      justify-content: center;
+    }
+
+    .preview-swatches-1 span {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+
+    /* Concept 2 preview — dark luxury */
+    .preview-2 {
+      background: #0a0d14;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+
+    .preview-2-content {
+      text-align: center;
+      padding: 24px;
+    }
+
+    .preview-2-content .divider {
+      width: 40px;
+      height: 1px;
+      background: #c9a84c;
+      margin: 0 auto 12px;
+    }
+
+    .preview-2-content .name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: #e8cc82;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .preview-2-content .sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(232,228,220,0.4);
+      margin-top: 6px;
+    }
+
+    .preview-swatches-2 {
+      display: flex;
+      gap: 6px;
+      margin-top: 14px;
+      justify-content: center;
+    }
+
+    .preview-swatches-2 span {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(201,168,76,0.3);
+    }
+
+    /* Card body */
+    .concept-body {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .concept-number {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #c9a84c;
+    }
+
+    .concept-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .concept-desc {
+      font-size: 0.875rem;
+      color: rgba(232,228,220,0.55);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .concept-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .concept-tag {
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(232,228,220,0.6);
+    }
+
+    .concept-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 12px 24px;
+      background: #c9a84c;
+      color: #0a0d14;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      transition: background 0.2s ease, transform 0.2s ease;
+      width: fit-content;
+    }
+
+    .concept-card:hover .concept-cta {
+      background: #e8cc82;
+      transform: translateX(3px);
+    }
+
+    .cta-arrow { font-size: 1rem; transition: transform 0.2s ease; }
+    .concept-card:hover .cta-arrow { transform: translateX(4px); }
+
+    /* Footer */
+    .hub-footer {
+      margin-top: 56px;
+      font-size: 0.8rem;
+      color: rgba(232,228,220,0.25);
+      text-align: center;
+      animation: fadeUp 0.6s ease 0.3s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 1100px) {
+      .concepts-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .concepts-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hub-header">
+    <p class="hub-eyebrow">Website Redesign</p>
+    <h1 class="hub-title">La Luna RGA - Design Concepts</h1>
+    <p class="hub-subtitle">Select a concept below to preview the full website</p>
+  </div>
+
+  <div class="concepts-grid">
+
+    <!-- Concept 1 -->
+    <a href="idea1/index.html" class="concept-card">
+      <div class="concept-preview preview-1">
+        <div class="preview-1-content">
+          <div class="moon">&#9790;</div>
+          <div class="name">La Luna RGA</div>
+          <div class="tag">Professional</div>
+          <div class="preview-swatches-1">
+            <span style="background:#3b1f6e;"></span>
+            <span style="background:#6a35b8;"></span>
+            <span style="background:#e8b84b;"></span>
+            <span style="background:#ffffff;"></span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-body">
+        <div class="concept-number">Concept 01</div>
+        <div class="concept-name">Professional &amp; Welcoming</div>
+        <p class="concept-desc">A clean, modern design with deep purple and gold tones. Bright, approachable, and full-featured, built to convert visitors into enrolled students.</p>
+        <div class="concept-tags">
+          <span class="concept-tag">Purple &amp; Gold</span>
+          <span class="concept-tag">Friendly</span>
+          <span class="concept-tag">Modern</span>
+          <span class="concept-tag">Full-featured</span>
+        </div>
+        <div class="concept-cta">Preview Concept 1 <span class="cta-arrow">&#8594;</span></div>
+      </div>
+    </a>
+
+    <!-- Concept 2 -->
+    <a href="idea2/index.html" class="concept-card">
+      <div class="concept-preview preview-2">
+        <div class="preview-2-content">
+          <div class="divider"></div>
+          <div class="name">La Luna</div>
+          <div class="sub">Rhythmic Gymnastics Academy</div>
+          <div class="preview-swatches-2">
+            <span style="background:#0a0d14;"></span>
+            <span style="background:#12161f;"></span>
+            <span style="background:#c9a84c;"></span>
+            <span style="background:#f5f0e8;"></span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-body">
+        <div class="concept-number">Concept 02</div>
+        <div class="concept-name">Luxury &amp; Elegant</div>
+        <p class="concept-desc">A sophisticated dark theme with gold typography and refined details. Conveys prestige, exclusivity, and world-class coaching.</p>
+        <div class="concept-tags">
+          <span class="concept-tag">Dark &amp; Gold</span>
+          <span class="concept-tag">Luxury</span>
+          <span class="concept-tag">Elegant</span>
+          <span class="concept-tag">Premium</span>
+        </div>
+        <div class="concept-cta">Preview Concept 2 <span class="cta-arrow">&#8594;</span></div>
+      </div>
+    </a>
+
+    <!-- Concept 3 -->
+    <a href="idea3/index.html" class="concept-card">
+      <div class="concept-preview" style="background:#f8f9fa; border-bottom:1px solid rgba(200,197,207,0.3);">
+        <div style="text-align:center; padding:24px;">
+          <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#735c00; margin-bottom:10px; font-family:'Inter',sans-serif;">Premier Academy · Sammamish</div>
+          <div style="font-family:'serif'; font-size:1.6rem; font-weight:700; color:#02002c; line-height:1.1;">La Luna</div>
+          <div style="font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; color:#735c00; margin-top:4px; font-family:'Inter',sans-serif;">Rhythmic Gymnastics</div>
+          <div style="display:flex; gap:6px; margin-top:14px; justify-content:center;">
+            <span style="width:20px;height:20px;border-radius:50%;background:#02002c;border:2px solid rgba(2,0,44,0.2);"></span>
+            <span style="width:20px;height:20px;border-radius:50%;background:#1a1a44;border:2px solid rgba(2,0,44,0.15);"></span>
+            <span style="width:20px;height:20px;border-radius:50%;background:#e9c349;border:2px solid rgba(233,195,73,0.4);"></span>
+            <span style="width:20px;height:20px;border-radius:50%;background:#f8f9fa;border:2px solid #e1e3e4;"></span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-body">
+        <div class="concept-number">Concept 03</div>
+        <div class="concept-name">Clean &amp; Contemporary</div>
+        <p class="concept-desc">A light, airy design with a dark navy hero and gold accents. Noto Serif headings with Manrope body text, modern, readable, and sophisticated.</p>
+        <div class="concept-tags">
+          <span class="concept-tag">Navy &amp; Gold</span>
+          <span class="concept-tag">Clean</span>
+          <span class="concept-tag">Contemporary</span>
+          <span class="concept-tag">Material Icons</span>
+        </div>
+        <div class="concept-cta">Preview Concept 3 <span class="cta-arrow">&#8594;</span></div>
+      </div>
+    </a>
+
+    <!-- Concept 4 -->
+    <a href="idea4/index.html" class="concept-card">
+      <div class="concept-preview" style="background: linear-gradient(160deg, #fff3ee 0%, #fde8e0 60%, #fce4ea 100%);">
+        <div style="text-align:center; padding:24px;">
+          <div style="width:44px; height:44px; border-radius:50%; background:linear-gradient(135deg,#e0546e,#f59a6e); display:flex; align-items:center; justify-content:center; font-size:1.2rem; color:white; margin:0 auto 10px;">&#9790;</div>
+          <div style="font-family:'serif'; font-size:1.4rem; font-weight:700; color:#3d1a22; line-height:1.2;">La Luna</div>
+          <div style="font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:#e0546e; font-weight:700; margin-top:3px; font-family:'Inter',sans-serif;">Rhythmic Gymnastics</div>
+          <div style="display:flex; gap:6px; margin-top:14px; justify-content:center;">
+            <span style="width:20px;height:20px;border-radius:50%;background:#e0546e;border:2px solid rgba(224,84,110,0.3);"></span>
+            <span style="width:20px;height:20px;border-radius:50%;background:#f59a6e;border:2px solid rgba(245,154,110,0.3);"></span>
+            <span style="width:20px;height:20px;border-radius:50%;background:#f4b8c8;border:2px solid rgba(244,184,200,0.4);"></span>
+            <span style="width:20px;height:20px;border-radius:50%;background:#fff9f6;border:2px solid rgba(224,84,110,0.2);"></span>
+          </div>
+        </div>
+      </div>
+      <div class="concept-body">
+        <div class="concept-number">Concept 04</div>
+        <div class="concept-name">Warm &amp; Friendly</div>
+        <p class="concept-desc">Soft pinks, peach, and rose tones with rounded corners everywhere. DM Serif Display headings with Nunito body — warm, welcoming, and community-focused.</p>
+        <div class="concept-tags">
+          <span class="concept-tag">Pink &amp; Peach</span>
+          <span class="concept-tag">Warm</span>
+          <span class="concept-tag">Friendly</span>
+          <span class="concept-tag">Community</span>
+        </div>
+        <div class="concept-cta">Preview Concept 4 <span class="cta-arrow">&#8594;</span></div>
+      </div>
+    </a>
+
+  </div>
+
+  <div class="hub-footer">
+    La Luna Rhythmic Gymnastics Academy - Sammamish, WA - Website Redesign Presentation
+  </div>
+
+</body>
+</html>

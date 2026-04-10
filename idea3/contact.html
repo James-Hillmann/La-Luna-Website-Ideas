@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | La Luna RGA</title>
+  <meta name="description" content="Get in touch with La Luna Rhythmic Gymnastics Academy in Sammamish, WA. Book a free trial class or ask us anything.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f8f9fa] text-[#191c1d] antialiased">
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header fixed top-0 w-full z-50 bg-[#f8f9fa]/90 backdrop-blur-xl" id="site-header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between" style="height:72px;">
+
+      <a href="index.html" style="text-decoration:none; display:flex; align-items:center; gap:10px;">
+        <span style="font-size:1.6rem; color:#02002c;">&#9790;</span>
+        <div>
+          <div class="font-headline" style="font-weight:700; font-size:1.2rem; color:#02002c; line-height:1.2;">La Luna</div>
+          <div style="font-size:9px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#735c00; line-height:1.2; font-family:'Manrope',sans-serif;">Rhythmic Gymnastics</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <div class="nav-item">
+          <a href="about.html" class="font-headline hover:text-[#735c00] transition-colors flex items-center gap-1" style="color:#02002c; text-decoration:none; font-size:1rem;">
+            About Us <span style="font-size:0.7rem; opacity:0.5; margin-left:2px;">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="about.html">About</a>
+            <a href="about.html#coaches">Coaches</a>
+            <a href="index.html#programs">Schedule</a>
+            <a href="about.html#gallery">Gallery</a>
+          </div>
+        </div>
+        <a href="index.html#programs" class="font-headline hover:text-[#735c00] transition-colors" style="color:#02002c; text-decoration:none; font-size:1rem;">Programs</a>
+        <a href="contact.html" class="font-headline" style="color:#735c00; text-decoration:none; font-size:1rem; font-weight:700;">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html?interest=trial" class="hidden md:inline-block font-label" style="background:#02002c; color:white; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:700; font-size:0.875rem;">Free Trial</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav">
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <a href="about.html" class="font-headline" style="padding:12px 0; font-weight:700; color:#02002c; border-bottom:1px solid #e1e3e4; font-size:1rem;">About Us</a>
+        <a href="about.html#coaches" style="padding:8px 0 8px 16px; font-size:0.875rem; color:#47464e;">— Coaches</a>
+        <a href="index.html#programs" style="padding:8px 0 8px 16px; font-size:0.875rem; color:#47464e;">— Schedule</a>
+        <a href="about.html#gallery" style="padding:8px 0 8px 16px; font-size:0.875rem; color:#47464e;">— Gallery</a>
+        <a href="index.html#programs" class="font-headline" style="padding:12px 0; font-weight:700; color:#02002c; border-bottom:1px solid #e1e3e4; font-size:1rem;">Programs</a>
+        <a href="contact.html" class="font-headline" style="padding:12px 0; font-weight:700; color:#735c00; border-bottom:1px solid #e1e3e4; font-size:1rem;">Contact</a>
+        <a href="contact.html?interest=trial" class="font-label" style="margin-top:12px; background:#02002c; color:white; text-align:center; padding:12px; border-radius:12px; font-weight:700;">Free Trial</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="relative overflow-hidden" style="background:#02002c; padding:120px 0 72px;">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <nav style="display:flex; align-items:center; gap:8px; font-size:0.875rem; margin-bottom:20px; font-family:'Manrope',sans-serif;">
+        <a href="index.html" style="color:#e9c349; opacity:0.7; text-decoration:none;">Home</a>
+        <span style="color:rgba(233,195,73,0.4);">&#8250;</span>
+        <span style="color:#e9c349;">Contact</span>
+      </nav>
+      <h1 class="font-headline font-bold text-white" style="font-size:clamp(2.5rem,5vw,4rem); line-height:1.1;">
+        Get in <em style="color:#e9c349; font-style:italic;">Touch</em>
+      </h1>
+      <p style="color:rgba(195,194,246,0.8); margin-top:16px; font-size:1.1rem; max-width:500px; font-family:'Manrope',sans-serif;">Have a question or just want to say hi? We'd love to hear from you.</p>
+    </div>
+    <div class="absolute rounded-full pointer-events-none" style="right:-80px; top:50%; transform:translateY(-50%); width:320px; height:320px; border:1px solid rgba(233,195,73,0.12);"></div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="py-16 md:py-24 bg-[#f8f9fa]">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+      <!-- Info Column -->
+      <div class="space-y-6 anim">
+
+        <div class="flex gap-5 items-start bg-white p-6 rounded-2xl" style="border:1px solid #e1e3e4;">
+          <div class="flex items-center justify-center rounded-xl flex-shrink-0" style="width:48px; height:48px; background:#1a1a44;">
+            <span class="material-symbols-outlined" style="color:#e9c349; font-size:1.2rem;">location_on</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold mb-1" style="color:#02002c;">Address</h4>
+            <p style="color:#47464e; font-size:0.9375rem;">21333 SE 20th St<br>Sammamish, WA 98075</p>
+            <a href="https://maps.google.com/?q=21333+SE+20th+St+Sammamish+WA+98075" target="_blank" class="font-label font-bold text-xs uppercase tracking-wider mt-2 inline-flex items-center gap-1" style="color:#735c00; text-decoration:none;">
+              Get directions <span class="material-symbols-outlined" style="font-size:0.9rem;">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex gap-5 items-start bg-white p-6 rounded-2xl" style="border:1px solid #e1e3e4;">
+          <div class="flex items-center justify-center rounded-xl flex-shrink-0" style="width:48px; height:48px; background:#1a1a44;">
+            <span class="material-symbols-outlined" style="color:#e9c349; font-size:1.2rem;">call</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold mb-1" style="color:#02002c;">Phone</h4>
+            <p style="color:#47464e; font-size:0.9375rem;">(425) 681-4303</p>
+            <a href="tel:+14256814303" class="font-label font-bold text-xs uppercase tracking-wider mt-2 inline-flex items-center gap-1" style="color:#735c00; text-decoration:none;">
+              Call now <span class="material-symbols-outlined" style="font-size:0.9rem;">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex gap-5 items-start bg-white p-6 rounded-2xl" style="border:1px solid #e1e3e4;">
+          <div class="flex items-center justify-center rounded-xl flex-shrink-0" style="width:48px; height:48px; background:#1a1a44;">
+            <span class="material-symbols-outlined" style="color:#e9c349; font-size:1.2rem;">mail</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold mb-1" style="color:#02002c;">Email</h4>
+            <p style="color:#47464e; font-size:0.9375rem;">info@lalunagym.com</p>
+            <a href="mailto:info@lalunagym.com" class="font-label font-bold text-xs uppercase tracking-wider mt-2 inline-flex items-center gap-1" style="color:#735c00; text-decoration:none;">
+              Send email <span class="material-symbols-outlined" style="font-size:0.9rem;">open_in_new</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex gap-5 items-start bg-white p-6 rounded-2xl" style="border:1px solid #e1e3e4;">
+          <div class="flex items-center justify-center rounded-xl flex-shrink-0" style="width:48px; height:48px; background:#1a1a44;">
+            <span class="material-symbols-outlined" style="color:#e9c349; font-size:1.2rem;">share</span>
+          </div>
+          <div>
+            <h4 class="font-headline font-bold mb-3" style="color:#02002c;">Follow Us</h4>
+            <div style="display:flex; gap:10px;">
+              <a href="https://www.facebook.com/LalunaRhythmic" target="_blank" aria-label="Facebook" style="width:40px;height:40px;border-radius:50%;border:1px solid #e1e3e4;display:flex;align-items:center;justify-content:center;color:#47464e;text-decoration:none;transition:all 0.2s;">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/lalunasammamishrg/" target="_blank" aria-label="Instagram" style="width:40px;height:40px;border-radius:50%;border:1px solid #e1e3e4;display:flex;align-items:center;justify-content:center;color:#47464e;text-decoration:none;transition:all 0.2s;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Form Column -->
+      <div class="anim anim-d1">
+        <div class="bg-white rounded-2xl p-8 shadow-sm" style="border:1px solid #e1e3e4;">
+          <h2 class="font-headline font-bold mb-2" style="font-size:1.75rem; color:#02002c;">Send us a message</h2>
+          <p class="mb-8" style="color:#47464e;">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+          <form onsubmit="handleContactForm(event)" class="space-y-5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="fname" class="contact-label">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Jane" required class="contact-input">
+              </div>
+              <div>
+                <label for="lname" class="contact-label">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Smith" required class="contact-input">
+              </div>
+            </div>
+            <div>
+              <label for="email" class="contact-label">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="jane@example.com" required class="contact-input">
+            </div>
+            <div>
+              <label for="phone" class="contact-label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(425) 000-0000" class="contact-input">
+            </div>
+            <div>
+              <label for="interest" class="contact-label">I'm interested in…</label>
+              <select id="interest" name="interest" class="contact-input">
+                <option value="">Select a program</option>
+                <option value="level1">Level 1 — Ages 4–5</option>
+                <option value="level2">Level 2 — Ages 5–6</option>
+                <option value="level34">Level 3/4 — Ages 6–7</option>
+                <option value="trial">Free Trial Class</option>
+                <option value="other">Other / General Question</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="contact-label">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about your child and any questions you have…" class="contact-input" style="resize:vertical;"></textarea>
+            </div>
+            <button type="submit" class="font-label w-full font-bold text-base" style="background:#02002c; color:white; padding:14px; border-radius:12px; border:none; cursor:pointer; transition:background 0.2s;">
+              Send Message
+            </button>
+            <div id="form-success" style="display:none; background:#f0fdf4; border:1px solid #86efac; color:#166534; border-radius:10px; padding:14px; text-align:center; font-family:'Manrope',sans-serif; font-weight:600;">
+              &#10003; Thanks! We'll be in touch soon.
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== MAP ========== -->
+  <section>
+    <iframe
+      title="La Luna RGA location"
+      src="https://maps.google.com/maps?q=21333+SE+20th+St+Sammamish+WA+98075&output=embed"
+      width="100%"
+      height="400"
+      style="border:0; display:block;"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer style="background:#02002c; color:white;">
+    <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <a href="index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none; margin-bottom:16px;">
+          <span style="font-size:1.5rem; color:white;">&#9790;</span>
+          <div>
+            <div class="font-headline" style="font-weight:700; color:white; font-size:1.2rem; line-height:1.2;">La Luna</div>
+            <div style="font-size:9px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#e9c349; line-height:1.2; font-family:'Manrope',sans-serif;">Rhythmic Gymnastics</div>
+          </div>
+        </a>
+        <p style="font-size:0.875rem; color:rgba(255,255,255,0.45); line-height:1.7; margin-bottom:20px;">La Luna Rhythmic Gymnastics Academy<br>Sammamish, Washington</p>
+        <div style="display:flex; gap:10px;">
+          <a href="https://www.facebook.com/LalunaRhythmic" target="_blank" aria-label="Facebook" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);text-decoration:none;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/lalunasammamishrg/" target="_blank" aria-label="Instagram" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);text-decoration:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-label" style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:white; margin-bottom:20px;">Navigate</h5>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+          <li><a href="about.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">About Us</a></li>
+          <li><a href="about.html#coaches" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Coaches</a></li>
+          <li><a href="index.html#programs" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Programs</a></li>
+          <li><a href="contact.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-label" style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:white; margin-bottom:20px;">Languages</h5>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+          <li><a href="index.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">English</a></li>
+          <li><a href="https://www.lalunasammamish.com/russian/index.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Russian</a></li>
+          <li><a href="https://www.lalunasammamish.com/chinese/index.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Chinese</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-label" style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:white; margin-bottom:20px;">Stay Updated</h5>
+        <p style="font-size:0.875rem; color:rgba(255,255,255,0.45); margin-bottom:16px; line-height:1.6;">Get the latest news and event updates.</p>
+        <form onsubmit="return false;" style="display:flex; gap:8px;">
+          <input type="email" placeholder="Your email address" aria-label="Email address" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:10px 12px; font-size:0.875rem; color:white; outline:none; min-width:0; font-family:'Manrope',sans-serif;">
+          <button type="submit" class="font-label" style="background:#e9c349; color:#02002c; border:none; border-radius:10px; padding:10px 14px; font-weight:700; font-size:0.875rem; cursor:pointer;">Go</button>
+        </form>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06); padding:24px 32px; text-align:center;">
+      <p style="font-size:0.7rem; color:rgba(255,255,255,0.25); text-transform:uppercase; letter-spacing:0.12em; font-family:'Manrope',sans-serif;">&copy; 2025 La Luna Rhythmic Gymnastics Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</button>
+  <script src="main.js"></script>
+  <script>
+    function handleContactForm(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+    }
+
+    // Auto-select dropdown from URL param
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('interest') === 'trial') {
+      const select = document.getElementById('interest');
+      if (select) {
+        select.value = 'trial';
+        select.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+/* La Luna RGA — Concept 3 Custom CSS
+   Visual design: Tailwind CDN (arbitrary values)
+   Custom: fonts, nav dropdown, hamburger, back-to-top, animations
+*/
+
+/* ---- Typography ---- */
+body { font-family: 'Manrope', sans-serif; }
+h1, h2, h3, h4, .font-headline { font-family: 'Noto Serif', serif; }
+.font-label { font-family: 'Manrope', sans-serif; }
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* ---- Header ---- */
+.site-header { transition: box-shadow 0.3s ease; }
+.site-header.scrolled { box-shadow: 0 2px 24px rgba(2,0,44,0.10); }
+
+/* ---- Desktop Dropdown ---- */
+.nav-item { position: relative; }
+.nav-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: -16px;
+  background: #ffffff;
+  border: 1px solid rgba(200,197,207,0.4);
+  border-radius: 14px;
+  padding: 8px;
+  min-width: 190px;
+  box-shadow: 0 8px 32px rgba(2,0,44,0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+}
+.nav-item:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.nav-dropdown a {
+  display: block;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #191c1d;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  transition: background 0.15s, color 0.15s;
+}
+.nav-dropdown a:hover { background: #f3f4f5; color: #735c00; }
+
+/* ---- Hamburger ---- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+@media (max-width: 767px) { .hamburger { display: flex; } }
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #02002c;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---- Mobile Nav ---- */
+#mobile-nav {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid rgba(200,197,207,0.3);
+  padding: 16px 24px 24px;
+  box-shadow: 0 8px 24px rgba(2,0,44,0.1);
+  z-index: 90;
+}
+#mobile-nav.open { display: block; }
+#mobile-nav a { text-decoration: none; }
+
+/* ---- Back to Top ---- */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  background: #02002c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.2s;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-to-top.visible { opacity: 1; pointer-events: all; }
+.back-to-top:hover { transform: translateY(-3px); background: #1a1a44; }
+
+/* ---- Scroll Animations ---- */
+.anim {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.anim.in { opacity: 1; transform: none; }
+.anim-d1 { transition-delay: 0.08s; }
+.anim-d2 { transition-delay: 0.16s; }
+.anim-d3 { transition-delay: 0.24s; }
+
+/* ---- Coach card image fallback ---- */
+.coach-img-wrap { position: relative; }
+.coach-img-wrap img { position: relative; z-index: 1; }
+.coach-initials {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a1a44;
+  color: #e9c349;
+  font-family: 'Noto Serif', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  border-radius: 12px;
+  z-index: 0;
+}
+
+/* ---- Gallery grid hover ---- */
+.gallery-item { overflow: hidden; }
+.gallery-item img { transition: transform 0.7s ease; display: block; }
+.gallery-item:hover img { transform: scale(1.08); }
+
+/* ---- Contact form styling ---- */
+.contact-input {
+  width: 100%;
+  background: #f3f4f5;
+  border: 1px solid #e1e3e4;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.9375rem;
+  color: #191c1d;
+  transition: border-color 0.2s, background 0.2s;
+  outline: none;
+}
+.contact-input:focus {
+  border-color: #02002c;
+  background: #ffffff;
+}
+.contact-label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #02002c;
+  margin-bottom: 6px;
+  font-family: 'Manrope', sans-serif;
+}
+
+/* ---- Responsive helpers ---- */
+@media (max-width: 767px) {
+  .hide-mobile { display: none !important; }
+}

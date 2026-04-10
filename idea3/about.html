@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | La Luna RGA</title>
+  <meta name="description" content="Learn about La Luna Rhythmic Gymnastics Academy — our story, our coaches, and our mission in Sammamish, WA.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f8f9fa] text-[#191c1d] antialiased">
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header fixed top-0 w-full z-50 bg-[#f8f9fa]/90 backdrop-blur-xl" id="site-header">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between" style="height:72px;">
+
+      <a href="index.html" style="text-decoration:none; display:flex; align-items:center; gap:10px;">
+        <span style="font-size:1.6rem; color:#02002c;">&#9790;</span>
+        <div>
+          <div class="font-headline" style="font-weight:700; font-size:1.2rem; color:#02002c; line-height:1.2;">La Luna</div>
+          <div style="font-size:9px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#735c00; line-height:1.2; font-family:'Manrope',sans-serif;">Rhythmic Gymnastics</div>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8">
+        <div class="nav-item">
+          <a href="about.html" class="font-headline hover:text-[#735c00] transition-colors flex items-center gap-1" style="color:#02002c; text-decoration:none; font-size:1rem; font-weight:700;">
+            About Us <span style="font-size:0.7rem; opacity:0.5; margin-left:2px;">▾</span>
+          </a>
+          <div class="nav-dropdown">
+            <a href="about.html">About</a>
+            <a href="#coaches">Coaches</a>
+            <a href="index.html#programs">Schedule</a>
+            <a href="#gallery">Gallery</a>
+          </div>
+        </div>
+        <a href="index.html#programs" class="font-headline hover:text-[#735c00] transition-colors" style="color:#02002c; text-decoration:none; font-size:1rem;">Programs</a>
+        <a href="contact.html" class="font-headline hover:text-[#735c00] transition-colors" style="color:#02002c; text-decoration:none; font-size:1rem;">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html?interest=trial" class="hidden md:inline-block font-label" style="background:#02002c; color:white; padding:10px 22px; border-radius:12px; text-decoration:none; font-weight:700; font-size:0.875rem;">Free Trial</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-nav">
+      <div style="display:flex; flex-direction:column; gap:4px;">
+        <a href="about.html" class="font-headline" style="padding:12px 0; font-weight:700; color:#02002c; border-bottom:1px solid #e1e3e4; font-size:1rem;">About Us</a>
+        <a href="#coaches" style="padding:8px 0 8px 16px; font-size:0.875rem; color:#47464e;">— Coaches</a>
+        <a href="index.html#programs" style="padding:8px 0 8px 16px; font-size:0.875rem; color:#47464e;">— Schedule</a>
+        <a href="#gallery" style="padding:8px 0 8px 16px; font-size:0.875rem; color:#47464e;">— Gallery</a>
+        <a href="index.html#programs" class="font-headline" style="padding:12px 0; font-weight:700; color:#02002c; border-bottom:1px solid #e1e3e4; font-size:1rem;">Programs</a>
+        <a href="contact.html" class="font-headline" style="padding:12px 0; font-weight:700; color:#02002c; border-bottom:1px solid #e1e3e4; font-size:1rem;">Contact</a>
+        <a href="contact.html?interest=trial" class="font-label" style="margin-top:12px; background:#02002c; color:white; text-align:center; padding:12px; border-radius:12px; font-weight:700;">Free Trial</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="relative overflow-hidden" style="background:#02002c; padding:120px 0 72px;">
+    <div class="max-w-7xl mx-auto px-8 relative z-10">
+      <nav style="display:flex; align-items:center; gap:8px; font-size:0.875rem; margin-bottom:20px; font-family:'Manrope',sans-serif;">
+        <a href="index.html" style="color:#e9c349; opacity:0.7; text-decoration:none;">Home</a>
+        <span style="color:rgba(233,195,73,0.4);">&#8250;</span>
+        <span style="color:#e9c349;">About Us</span>
+      </nav>
+      <h1 class="font-headline font-bold text-white" style="font-size:clamp(2.5rem,5vw,4rem); line-height:1.1;">
+        About <em style="color:#e9c349; font-style:italic;">La Luna</em>
+      </h1>
+      <p style="color:rgba(195,194,246,0.8); margin-top:16px; font-size:1.1rem; max-width:500px; font-family:'Manrope',sans-serif;">Our story, our mission, and the team behind the magic.</p>
+    </div>
+    <div class="absolute rounded-full pointer-events-none" style="right:-80px; top:50%; transform:translateY(-50%); width:320px; height:320px; border:1px solid rgba(233,195,73,0.12);"></div>
+    <div class="absolute rounded-full pointer-events-none" style="right:-130px; top:50%; transform:translateY(-50%); width:480px; height:480px; border:1px solid rgba(233,195,73,0.06);"></div>
+  </section>
+
+  <!-- ========== MISSION ========== -->
+  <section class="py-16 md:py-24 bg-[#f8f9fa]">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="relative anim">
+        <div class="absolute -inset-4 rounded-xl" style="background:#edeeef; transform:rotate(-1.5deg);"></div>
+        <img src="../images/about/about.jpg" alt="La Luna Gymnastics Academy" class="relative z-10 w-full object-cover rounded-xl shadow-2xl" style="height:clamp(280px,55vw,540px);" loading="lazy">
+        <div class="absolute bottom-8 -right-4 z-20 rounded-xl px-6 py-4 shadow-xl" style="background:#02002c; color:white;">
+          <img src="../images/about/about-banner.jpg" alt="Gymnastics performance" class="rounded-lg mb-3 object-cover" style="width:180px; height:80px;" loading="lazy">
+          <div class="font-label font-bold text-xs uppercase tracking-wider" style="color:#e9c349;">Performance Ready</div>
+        </div>
+      </div>
+      <div class="space-y-6 anim anim-d1">
+        <p class="font-label font-bold text-sm uppercase tracking-widest" style="color:#735c00;">Our Mission</p>
+        <h2 class="font-headline font-bold leading-tight" style="font-size:clamp(2rem,4vw,2.75rem); color:#02002c;">
+          More than gymnastics —<br>a <em style="color:#735c00; font-style:italic;">community</em>
+        </h2>
+        <p class="text-lg leading-relaxed" style="color:#47464e;">At La Luna Rhythmic Gymnastics Academy, we believe every child deserves the chance to discover their potential. Founded in Sammamish, WA, we've built a welcoming, professional environment where young athletes from age 4 to 18 develop strength, artistry, discipline, and joy.</p>
+        <p class="leading-relaxed" style="color:#47464e;">Our certified coaches bring international experience and genuine passion to every class — from beginner fundamentals to competitive training at the highest levels.</p>
+
+        <div class="grid grid-cols-3 gap-4 pt-4">
+          <div class="text-center p-5 rounded-2xl" style="background:#f3f4f5;">
+            <div class="font-headline font-bold" style="font-size:1.75rem; color:#02002c;">4,000+</div>
+            <div class="font-label text-xs uppercase tracking-wider mt-1" style="color:#735c00;">Students Trained</div>
+          </div>
+          <div class="text-center p-5 rounded-2xl" style="background:#f3f4f5;">
+            <div class="font-headline font-bold" style="font-size:1.75rem; color:#02002c;">10+</div>
+            <div class="font-label text-xs uppercase tracking-wider mt-1" style="color:#735c00;">Years in Sammamish</div>
+          </div>
+          <div class="text-center p-5 rounded-2xl" style="background:#f3f4f5;">
+            <div class="font-headline font-bold" style="font-size:1.75rem; color:#02002c;">1,000+</div>
+            <div class="font-label text-xs uppercase tracking-wider mt-1" style="color:#735c00;">5&#8209;Star Reviews</div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+          <div class="p-5 rounded-xl" style="background:#f3f4f5; border-left:4px solid #e9c349;">
+            <h4 class="font-headline font-bold mb-2" style="color:#02002c;">Certified Coaches</h4>
+            <p class="text-sm" style="color:#47464e;">Expert guidance from former international competitors and certified professionals.</p>
+          </div>
+          <div class="p-5 rounded-xl" style="background:#f3f4f5; border-left:4px solid #e9c349;">
+            <h4 class="font-headline font-bold mb-2" style="color:#02002c;">Inclusive Space</h4>
+            <p class="text-sm" style="color:#47464e;">Programs designed for every stage of development, from first steps to competition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== VALUES ========== -->
+  <section class="py-16 md:py-24 bg-[#f3f4f5]">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16 anim">
+        <p class="font-label font-bold text-sm uppercase tracking-widest mb-3" style="color:#735c00;">What We Stand For</p>
+        <h2 class="font-headline font-bold" style="font-size:clamp(2rem,4vw,3rem); color:#02002c;">Our Values</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="anim bg-white rounded-2xl p-8" style="border:1px solid #e1e3e4;">
+          <div class="font-headline font-bold mb-4" style="font-size:2.5rem; color:#e1e3e4;">01</div>
+          <h3 class="font-headline font-bold mb-3" style="font-size:1.2rem; color:#02002c;">Safety First</h3>
+          <p class="text-sm leading-relaxed" style="color:#47464e;">Every class is designed with age-appropriate progressions and certified coaching to ensure your child trains safely and confidently.</p>
+        </div>
+        <div class="anim anim-d1 bg-white rounded-2xl p-8" style="border:1px solid #e1e3e4;">
+          <div class="font-headline font-bold mb-4" style="font-size:2.5rem; color:#e1e3e4;">02</div>
+          <h3 class="font-headline font-bold mb-3" style="font-size:1.2rem; color:#02002c;">Inclusive Community</h3>
+          <p class="text-sm leading-relaxed" style="color:#47464e;">We welcome students of all backgrounds and ability levels. Everyone belongs at La Luna — from first-timers to competitive athletes.</p>
+        </div>
+        <div class="anim anim-d2 bg-white rounded-2xl p-8" style="border:1px solid #e1e3e4;">
+          <div class="font-headline font-bold mb-4" style="font-size:2.5rem; color:#e1e3e4;">03</div>
+          <h3 class="font-headline font-bold mb-3" style="font-size:1.2rem; color:#02002c;">Excellence in Coaching</h3>
+          <p class="text-sm leading-relaxed" style="color:#47464e;">Our coaches hold international certifications and bring decades of experience at the regional, national, and world level.</p>
+        </div>
+        <div class="anim anim-d3 bg-white rounded-2xl p-8" style="border:1px solid #e1e3e4;">
+          <div class="font-headline font-bold mb-4" style="font-size:2.5rem; color:#e1e3e4;">04</div>
+          <h3 class="font-headline font-bold mb-3" style="font-size:1.2rem; color:#02002c;">Joy of Movement</h3>
+          <p class="text-sm leading-relaxed" style="color:#47464e;">Above all, we cultivate a genuine love for gymnastics — because athletes who love what they do achieve the most.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS + VIDEO ========== -->
+  <section class="py-16 md:py-24 bg-[#f8f9fa]" id="testimonials">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16 anim">
+        <p class="font-label font-bold text-sm uppercase tracking-widest mb-3" style="color:#735c00;">Community Feedback</p>
+        <h2 class="font-headline font-bold" style="font-size:clamp(2rem,4vw,3rem); color:#02002c;">What Parents Say</h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+
+        <!-- Testimonial cards -->
+        <div class="space-y-6">
+          <div class="anim bg-white rounded-2xl p-8" style="border:1px solid #e1e3e4;">
+            <div style="color:#e9c349; margin-bottom:12px; font-size:1rem; letter-spacing:2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="font-headline italic leading-relaxed mb-6" style="color:#47464e; font-size:1rem;">"Choosing La Luna Gymnastics School for our daughter was one of the best decisions we've made as parents. From day one, the staff made her feel welcome and valued. Watching her confidence soar and witnessing her master challenging routines is incredibly rewarding."</p>
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center rounded-full font-headline font-bold text-white" style="width:44px; height:44px; background:#02002c; flex-shrink:0;">JL</div>
+              <div>
+                <div class="font-label font-bold" style="color:#02002c;">Jason Lee</div>
+                <div class="text-xs" style="color:#47464e;">Satisfied Parent</div>
+              </div>
+            </div>
+          </div>
+          <div class="anim anim-d1 bg-white rounded-2xl p-8" style="border:1px solid #e1e3e4;">
+            <div style="color:#e9c349; margin-bottom:12px; font-size:1rem; letter-spacing:2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="font-headline italic leading-relaxed mb-6" style="color:#47464e; font-size:1rem;">"We have been part of the La Luna Gymnastics family for several years now, and we couldn't be happier. The progress our two daughters have made is astonishing, and their passion for gymnastics continues to grow with each passing day."</p>
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center rounded-full font-headline font-bold text-white" style="width:44px; height:44px; background:#02002c; flex-shrink:0;">JP</div>
+              <div>
+                <div class="font-label font-bold" style="color:#02002c;">Jessica Patel</div>
+                <div class="text-xs" style="color:#47464e;">Satisfied Parent</div>
+              </div>
+            </div>
+          </div>
+          <div class="anim anim-d2 bg-white rounded-2xl p-8" style="border:1px solid #e1e3e4;">
+            <div style="color:#e9c349; margin-bottom:12px; font-size:1rem; letter-spacing:2px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="font-headline italic leading-relaxed mb-6" style="color:#47464e; font-size:1rem;">"La Luna Gymnastics School truly stands out! They prioritize safety and ensure each child's well-being while pushing them to achieve their personal best. Our daughter has flourished under the guidance of the dedicated coaches."</p>
+            <div class="flex items-center gap-3">
+              <div class="flex items-center justify-center rounded-full font-headline font-bold text-white" style="width:44px; height:44px; background:#02002c; flex-shrink:0;">MG</div>
+              <div>
+                <div class="font-label font-bold" style="color:#02002c;">Matthew Gonzalez</div>
+                <div class="text-xs" style="color:#47464e;">Satisfied Parent</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video -->
+        <div class="anim anim-d1">
+          <div class="rounded-2xl overflow-hidden shadow-xl" style="position:relative; padding-bottom:56.25%; height:0;">
+            <iframe src="https://www.youtube.com/embed/09ij0r-_mxw" title="La Luna students" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+          </div>
+          <div class="flex items-center gap-4 mt-6 p-6 bg-white rounded-2xl" style="border:1px solid #e1e3e4;">
+            <div class="flex items-center justify-center rounded-full flex-shrink-0" style="width:48px; height:48px; background:#02002c;">
+              <span class="material-symbols-outlined text-white" style="font-size:1.2rem;">play_arrow</span>
+            </div>
+            <div>
+              <h4 class="font-headline font-bold" style="color:#02002c;">Our Students</h4>
+              <p class="text-sm" style="color:#47464e;">At La Luna, we produce the best gymnasts in Washington.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== COACHES ========== -->
+  <section class="py-16 md:py-24 bg-[#f3f4f5]" id="coaches">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16 anim">
+        <p class="font-label font-bold text-sm uppercase tracking-widest mb-3" style="color:#735c00;">Meet the Team</p>
+        <h2 class="font-headline font-bold" style="font-size:clamp(2rem,4vw,3rem); color:#02002c;">Our Coaches</h2>
+        <p class="mt-4 max-w-2xl mx-auto" style="color:#47464e;">World-class instructors dedicated to your child's growth and success.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="anim group">
+          <div class="coach-img-wrap rounded-2xl overflow-hidden mb-5" style="aspect-ratio:3/4; position:relative;">
+            <img src="../images/coaches/arzu.jpg" alt="Arzu Karaali" class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.style.display='none'">
+            <div class="coach-initials">AK</div>
+          </div>
+          <h4 class="font-headline font-bold" style="font-size:1.25rem; color:#02002c;">Arzu Karaali</h4>
+          <p class="font-label font-bold text-xs uppercase tracking-wider mt-1" style="color:#735c00;">Head Coach &amp; Founder</p>
+          <p class="text-sm mt-2" style="color:#47464e;">Program Director &amp; Lead Instructor</p>
+        </div>
+
+        <div class="anim anim-d1 group">
+          <div class="coach-img-wrap rounded-2xl overflow-hidden mb-5" style="aspect-ratio:3/4; position:relative;">
+            <img src="../images/coaches/shawnene.jpg" alt="Shawnene Hersey" class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.style.display='none'">
+            <div class="coach-initials">SH</div>
+          </div>
+          <h4 class="font-headline font-bold" style="font-size:1.25rem; color:#02002c;">Shawnene Hersey</h4>
+          <p class="font-label font-bold text-xs uppercase tracking-wider mt-1" style="color:#735c00;">Drama &amp; Presentation Coach</p>
+        </div>
+
+        <div class="anim anim-d2 group">
+          <div class="coach-img-wrap rounded-2xl overflow-hidden mb-5" style="aspect-ratio:3/4; position:relative;">
+            <img src="../images/coaches/alla.jpg" alt="Alla Shalimova" class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.style.display='none'">
+            <div class="coach-initials">AS</div>
+          </div>
+          <h4 class="font-headline font-bold" style="font-size:1.25rem; color:#02002c;">Alla Shalimova</h4>
+          <p class="font-label font-bold text-xs uppercase tracking-wider mt-1" style="color:#735c00;">Coach</p>
+        </div>
+
+        <div class="anim anim-d3 group">
+          <div class="coach-img-wrap rounded-2xl overflow-hidden mb-5" style="aspect-ratio:3/4; position:relative;">
+            <img src="../images/coaches/emma.jpg" alt="Emma Potra" class="w-full h-full object-cover relative z-10 transition-transform duration-700 group-hover:scale-110" loading="lazy" onerror="this.style.display='none'">
+            <div class="coach-initials">EP</div>
+          </div>
+          <h4 class="font-headline font-bold" style="font-size:1.25rem; color:#02002c;">Emma Potra</h4>
+          <p class="font-label font-bold text-xs uppercase tracking-wider mt-1" style="color:#735c00;">Level 2/3/4 Team Supervisor &amp; Coach</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="py-16 md:py-24 bg-[#f8f9fa]" id="gallery">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16 anim">
+        <p class="font-label font-bold text-sm uppercase tracking-widest mb-3" style="color:#735c00;">In Action</p>
+        <h2 class="font-headline font-bold" style="font-size:clamp(2rem,4vw,3rem); color:#02002c;">Our Gallery</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="anim gallery-item rounded-2xl overflow-hidden" style="height:240px;"><img src="../images/gallery/wint1.jpg" alt="La Luna gymnastics" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="anim anim-d1 gallery-item rounded-2xl overflow-hidden" style="height:240px;"><img src="../images/gallery/wint2.jpg" alt="La Luna gymnastics" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="anim anim-d2 gallery-item rounded-2xl overflow-hidden" style="height:240px;"><img src="../images/gallery/wint3.jpg" alt="La Luna gymnastics" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="anim gallery-item rounded-2xl overflow-hidden" style="height:240px;"><img src="../images/gallery/wint4.jpg" alt="La Luna gymnastics" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="anim anim-d1 gallery-item rounded-2xl overflow-hidden" style="height:240px;"><img src="../images/gallery/lalunakiss.jpg" alt="La Luna Kiss Show" class="w-full h-full object-cover" loading="lazy"></div>
+        <div class="anim anim-d2 gallery-item rounded-2xl overflow-hidden" style="height:240px;"><img src="../images/about/about.jpg" alt="La Luna gymnastics" class="w-full h-full object-cover" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA BANNER ========== -->
+  <section class="py-16 md:py-24 bg-[#f3f4f5]">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="relative text-center overflow-hidden rounded-[2rem] p-12 md:p-20" style="background:#1a1a44;">
+        <div class="absolute rounded-full pointer-events-none" style="top:0; right:0; width:280px; height:280px; background:rgba(233,195,73,0.08); transform:translate(40%,-40%);"></div>
+        <div class="relative z-10">
+          <h2 class="font-headline font-bold text-white mb-6" style="font-size:clamp(2rem,5vw,3.5rem);">Ready to begin?</h2>
+          <p class="text-lg mb-10 max-w-xl mx-auto" style="color:#c3c2f6;">The first trial class is on us — come discover what La Luna is all about.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html?interest=trial" class="font-label inline-block font-bold text-lg" style="background:#e9c349; color:#02002c; padding:16px 40px; border-radius:14px; text-decoration:none;">Book a Free Trial Class</a>
+            <a href="tel:+14256814303" class="font-label inline-block font-bold text-lg" style="border:2px solid rgba(255,255,255,0.2); color:white; padding:16px 40px; border-radius:14px; text-decoration:none;">&#128222; (425) 681-4303</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer style="background:#02002c; color:white;">
+    <div class="max-w-7xl mx-auto px-8 py-16 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <a href="index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none; margin-bottom:16px;">
+          <span style="font-size:1.5rem; color:white;">&#9790;</span>
+          <div>
+            <div class="font-headline" style="font-weight:700; color:white; font-size:1.2rem; line-height:1.2;">La Luna</div>
+            <div style="font-size:9px; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#e9c349; line-height:1.2; font-family:'Manrope',sans-serif;">Rhythmic Gymnastics</div>
+          </div>
+        </a>
+        <p style="font-size:0.875rem; color:rgba(255,255,255,0.45); line-height:1.7; margin-bottom:20px;">La Luna Rhythmic Gymnastics Academy<br>Sammamish, Washington</p>
+        <div style="display:flex; gap:10px;">
+          <a href="https://www.facebook.com/LalunaRhythmic" target="_blank" aria-label="Facebook" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);text-decoration:none;transition:all 0.2s;">
+            <svg viewBox="0 0 24 24" fill="currentColor" style="width:16px;height:16px;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/lalunasammamishrg/" target="_blank" aria-label="Instagram" style="width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);text-decoration:none;transition:all 0.2s;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h5 class="font-label" style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:white; margin-bottom:20px;">Navigate</h5>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+          <li><a href="about.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">About Us</a></li>
+          <li><a href="#coaches" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Coaches</a></li>
+          <li><a href="index.html#programs" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Programs</a></li>
+          <li><a href="contact.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-label" style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:white; margin-bottom:20px;">Languages</h5>
+        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px;">
+          <li><a href="index.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">English</a></li>
+          <li><a href="https://www.lalunasammamish.com/russian/index.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Russian</a></li>
+          <li><a href="https://www.lalunasammamish.com/chinese/index.html" style="font-size:0.875rem; color:rgba(255,255,255,0.45); text-decoration:none;">Chinese</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-label" style="font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:white; margin-bottom:20px;">Stay Updated</h5>
+        <p style="font-size:0.875rem; color:rgba(255,255,255,0.45); margin-bottom:16px; line-height:1.6;">Get the latest news and event updates.</p>
+        <form onsubmit="return false;" style="display:flex; gap:8px;">
+          <input type="email" placeholder="Your email address" aria-label="Email address" style="flex:1; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:10px; padding:10px 12px; font-size:0.875rem; color:white; outline:none; min-width:0; font-family:'Manrope',sans-serif;">
+          <button type="submit" class="font-label" style="background:#e9c349; color:#02002c; border:none; border-radius:10px; padding:10px 14px; font-weight:700; font-size:0.875rem; cursor:pointer;">Go</button>
+        </form>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06); padding:24px 32px; text-align:center;">
+      <p style="font-size:0.7rem; color:rgba(255,255,255,0.25); text-transform:uppercase; letter-spacing:0.12em; font-family:'Manrope',sans-serif;">&copy; 2025 La Luna Rhythmic Gymnastics Academy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">&#8679;</button>
+  <script src="main.js"></script>
+</body>
+</html>

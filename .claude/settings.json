@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.lalunasammamish.com)",
+      "Bash(grep -E \"\\\\.\\(jpg|jpeg|png|gif|svg|webp\\)$\")",
+      "Bash(wget --version)",
+      "Bash(curl --version)",
+      "Bash(curl -s \"https://www.lalunasammamish.com/assets/img/\")",
+      "Bash(curl -s \"https://www.lalunasammamish.com/\" \"https://www.lalunasammamish.com/about.html\" \"https://www.lalunasammamish.com/instructor.html\" \"https://www.lalunasammamish.com/gallery.html\")",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/gallery/gallery-__TRACKED_VAR__.jpg' https://www.lalunasammamish.com/assets/img/gallery/gallery-__TRACKED_VAR__.jpg)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/gallery/gallery-__TRACKED_VAR__.__TRACKED_VAR__.jpg' https://www.lalunasammamish.com/assets/img/gallery/gallery-__TRACKED_VAR__.__TRACKED_VAR__.jpg)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/gallery/fr__TRACKED_VAR__.jpg' https://www.lalunasammamish.com/assets/img/gallery/fr__TRACKED_VAR__.jpg)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/gallery/gallery43.2.jpg' https://www.lalunasammamish.com/assets/img/gallery/gallery43.2.jpg)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/about/about.jpg' https://www.lalunasammamish.com/assets/img/about/about.jpg)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/about/about-banner.jpg' https://www.lalunasammamish.com/assets/img/about/about-banner.jpg)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/hero/hero.png' https://www.lalunasammamish.com/assets/img/hero/hero-2/hero.png)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/hero/hero-sm.jpg' https://www.lalunasammamish.com/assets/img/hero/hero-2/hero-sm.jpg)",
+      "Bash(curl -s -o 'c:/Users/James/Desktop/Coding/Deniz'\\\\''s Aunt/images/coaches/arzu.jpg' https://www.lalunasammamish.com/assets/img/teacher/teacger-1.jpg)",
+      "Bash(sed -i 's|href=\"about.html#schedule\"|href=\"index.html#programs\"|g' \"c:/Users/James/Desktop/Coding/Deniz's Aunt/index.html\" \"c:/Users/James/Desktop/Coding/Deniz's Aunt/contact.html\")",
+      "Bash(sed -i 's|href=\"#schedule\"|href=\"index.html#programs\"|g' \"c:/Users/James/Desktop/Coding/Deniz's Aunt/about.html\")"
+    ]
+  }
+}
